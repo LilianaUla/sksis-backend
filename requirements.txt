@@ -1,14 +1,7 @@
-import os
-
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-
-
-class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY', 'sksis-shop-secret-key-change-in-production')
-    JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY', 'sksis-jwt-secret-key-change-in-production')
-    JWT_ACCESS_TOKEN_EXPIRES = 60 * 60 * 24 * 7
-
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASE_DIR, 'sksis.db')
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
-
-    DEBUG = os.environ.get('DEBUG', 'false').lower() == 'true'
+Flask
+Flask-SQLAlchemy
+Flask-CORS
+Flask-JWT-Extended
+Werkzeug
+gunicorn
+psycopg2-binary
