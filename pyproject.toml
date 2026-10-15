@@ -1,0 +1,7 @@
+[project]
+name = "sksis-backend"
+version = "0.0.0"
+requires-python = ">=3.11,<3.12"
+
+[tool.vercel]
+python-version = "3.11.9"
